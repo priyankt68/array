@@ -61,6 +61,7 @@ int main(int argc, char const *argv[])
 
 	intStack.push(10);
 	intStack.push(11);
+	intStack.push(12);
 	cout << intStack.top()<<endl;
 
 
