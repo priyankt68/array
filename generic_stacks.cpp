@@ -1,7 +1,6 @@
 #include <iostream>
 #include <vector>
 #include <stdexcept>
-
 using namespace std;
 
 
@@ -60,6 +59,9 @@ int main(int argc, char const *argv[])
 	Stack<int> intStack;  //stack of ints
 	Stack<string> stringStack;  // stack of strings
 
+	intStack.push(10);
+	intStack.push(11);
+	cout << intStack.top()<<endl;
 
 
 
