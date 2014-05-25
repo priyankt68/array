@@ -59,7 +59,7 @@ int main(int argc, char const *argv[])
 	cout << " Pushing elements into the stack";
 	for (int i = 0; i < si; ++i)
 	{
-	obj.push(i);
+	obj.push(i+1);
 	}
 	
 
