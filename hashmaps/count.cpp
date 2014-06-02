@@ -1,46 +1,50 @@
+/*
+
+
+Given an array A[] and a number x, check for pair in A[] with sum as x
+
+*/
+
+
 #include <iostream>
 #include <string>
 #include <map>
 // /using namespace std;
 
-int main()
+int main(int argc, char const *argv[])
 {
 
-	std::map<std::string,int> mymap = {{"Priyank",1},{"Trivedi",2},{"is",3}};
+	if (argc != 2)
 
-
-	for(auto& x:mymap){
-		std::cout << x.first << ":" << x.second << "\n";
-	}
-
-	int n=10;
-	std::map<int,int> mymap1;
-int i=0;
-	for ( i = 0; i < n; ++i)
 	{
-		mymap1[i] = i*2;
+		std :: cout << "Usage : ./count.cpp <key>" << std::endl;
+		exit(1);
 	}
+	int k = atoi(argv[1]);
 
-	mymap1[i+1] = 0;
+	int arr[] {-1,1,2,3,4,7,8,5};
 
-	for (std::map<int,int>::iterator it = mymap1.begin(); it!=mymap1.end();++it)
-		{
-			std::cout << it->first << "==>" << it->second <<std::endl;
-		}
+	int size = sizeof(arr) / sizeof(arr[0]);
+	
+	std::map<int,int> mymap1;   // defining a hashmap and it's values are auto-initialised.
 
-	int c;
 
-	for (std::map<int,int>::iterator it=mymap1.begin(); it != mymap1.end();++it)
+int t;		
+ 
+
+	for (int i = 0; i < size; i++)
 	{
-		std::cout << it->second<<  ": " << mymap1.count(it->second) << std::endl;	
-	}
 
-	mymap1.emplace(10,3);
-
-for (std::map<int,int>::iterator it = mymap1.begin(); it!=mymap1.end();++it)
+		t = k - arr[i];
+		if(mymap1[t] == 1 )
 		{
-			std::cout << it->first << "==>" << it->second <<std::endl;
+			std:: cout << arr[i] << "," <<  t << std::endl;
 		}
+		mymap1[arr[i]] = 1;
+	}
+	
+
+
 	return 0;
 }
 
