@@ -7,6 +7,7 @@ Given an array A[] and a number x, check for pair in A[] with sum as x
 
 
 #include <iostream>
+#include <stdlib.h>
 #include <string>
 #include <map>
 // /using namespace std;
@@ -18,7 +19,7 @@ int main(int argc, char const *argv[])
 
 	{
 		std :: cout << "Usage : ./count.cpp <key>" << std::endl;
-		exit(1);
+		exit;
 	}
 	int k = atoi(argv[1]);
 
